@@ -16,4 +16,5 @@ dependencies = [
     "pypdf>=6.1.1",
     "sentence-transformers>=5.1.1",
     "streamlit>=1.50.0",
+    "torch>=2.8.0",
 ]

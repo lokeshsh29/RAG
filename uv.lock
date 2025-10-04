@@ -2629,6 +2629,7 @@ dependencies = [
     { name = "pypdf" },
     { name = "sentence-transformers" },
     { name = "streamlit" },
+    { name = "torch" },
 ]
 
 [package.metadata]
@@ -2644,6 +2645,7 @@ requires-dist = [
     { name = "pypdf", specifier = ">=6.1.1" },
     { name = "sentence-transformers", specifier = ">=5.1.1" },
     { name = "streamlit", specifier = ">=1.50.0" },
+    { name = "torch", specifier = ">=2.8.0" },
 ]
 
 [[package]]
