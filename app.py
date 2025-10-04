@@ -5,6 +5,9 @@ from src.components.EmbeddingManager import EmbeddingManager
 from src.components.RagRetriever import RAGRetriever
 from src.components.VectorStore import VectorStore
 from langchain_groq import ChatGroq
+from pathlib import Path
+
+db_path = Path(__file__).resolve().parent / "vector_store"
 
 # Load environment variables
 load_dotenv()
@@ -26,7 +29,7 @@ if "vectorstore" not in st.session_state:
     # Use a safe path inside current directory for Streamlit Cloud
     st.session_state.vectorstore = VectorStore(
     collection_name="pdf_documents",
-    persist_directory="../data/vector_store"
+    persist_directory=db_path
     )
 
 if "retriever" not in st.session_state:
