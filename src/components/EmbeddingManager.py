@@ -1,6 +1,7 @@
 import numpy as np
 from sentence_transformers import SentenceTransformer
 import chromadb
+import torch
 from typing import List
 
 class EmbeddingManager:
@@ -21,7 +22,8 @@ class EmbeddingManager:
 
         try:
             print(f"Loading embedding model: {self.model_name}")
-            self.model=SentenceTransformer(self.model_name,device="cpu")
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+            self.model=SentenceTransformer(self.model_name,device=device)
             print(f"Model loaded successfully. Embedding dimension: {self.model.get_sentence_embedding_dimension()}")
         except Exception as e:
             print(f"Error loading model {self.model_name}: {e}")
