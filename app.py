@@ -7,7 +7,7 @@ from src.components.VectorStore import VectorStore
 from langchain_groq import ChatGroq
 from pathlib import Path
 
-db_path = Path(__file__).resolve().parent / "vector_store"
+db_path = Path(__file__).resolve().parent / "data" / "vector_store"
 
 # Load environment variables
 load_dotenv()
