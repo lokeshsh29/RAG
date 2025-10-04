@@ -32,8 +32,8 @@ if "vectorstore" not in st.session_state:
     persist_directory=db_path
     )
 
-st.write(f"Persist directory: {db_path}")
-st.write(f"Collection count: {st.session_state.vectorstore.collection.count()}")
+#st.write(f"Persist directory: {db_path}")
+#st.write(f"Collection count: {st.session_state.vectorstore.collection.count()}")
 
 if "retriever" not in st.session_state:
     st.session_state.retriever = RAGRetriever(
